@@ -23,7 +23,9 @@ server.post('/formUser', upload.none(), validMw({
    },
    required: ['name', 'login', 'surname', 'dataBirthday'],
    additionalProperties: false
-}), (req, res) => {});
+}), async(req, res) => {
+   consile.log('ok');
+});
 
 server.listen(3000, () => {
    console.log('server work');
